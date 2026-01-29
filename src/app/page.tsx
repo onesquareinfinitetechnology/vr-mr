@@ -58,7 +58,10 @@ export default function Home() {
           </CopyBlock>
 
           <HeroVisualWrap>
-            <HeroVisual imageSrc="/images/vr_hero.png" imageAlt="VR headset experience" />
+            <HeroVisual
+              imageSrc="/images/vr_hero.png"
+              imageAlt="VR headset experience"
+            />
           </HeroVisualWrap>
         </HeroLayout>
       </Section>
@@ -80,7 +83,10 @@ export default function Home() {
             </Lead>
           </CopyBlock>
 
-          <MediaCard imageSrc="/images/vr_lab.png" imageAlt="VR-MR lab workspace" />
+          <MediaCard
+            imageSrc="/images/vr_lab.png"
+            imageAlt="VR-MR lab workspace"
+          />
         </AboutLayout>
       </Section>
 
@@ -111,7 +117,10 @@ export default function Home() {
             Technology Stack
           </Heading>
           <Lead>Powered by Unreal Engine and spatial computing APIs.</Lead>
-          <TechPanel imageSrc="/images/vr_tech_stack.png" imageAlt="VR technology stack" />
+          <TechPanel
+            imageSrc="/images/vr_tech_stack.png"
+            imageAlt="VR technology stack"
+          />
         </Container>
       </Section>
 
