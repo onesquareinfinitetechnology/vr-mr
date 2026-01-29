@@ -1,0 +1,26 @@
+@import "./components.css";
+
+@tailwind base;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --ink: #0b0f1a;
+  --surface: #121826;
+  --surface-2: #0e1320;
+  --surface-3: #161d2e;
+  --card: #1e293b;
+  --card-2: #1f2937;
+  --accent: #00f0ff;
+  --accent-2: #b726ff;
+  --text-muted: rgba(255, 255, 255, 0.7);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--ink);
+  color: #ffffff;
+}

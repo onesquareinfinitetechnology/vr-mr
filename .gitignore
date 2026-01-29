@@ -1,0 +1,52 @@
+# dependencies
+node_modules/
+
+# Next.js
+.next/
+out/
+build/
+
+# production / debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.log
+
+# env files (keep .env.example tracked)
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# local caches
+.cache/
+.npm/
+.pnpm-store/
+.yarn/
+.turbo/
+.vercel/
+.eslintcache
+*.tsbuildinfo
+
+# testing
+coverage/
+
+# TypeScript (optional if you want)
+# *.tsbuildinfo
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Optional: if you use these tools
+# storybook-static/
+# playwright-report/
+# test-results/
+
+AGENTS.md
