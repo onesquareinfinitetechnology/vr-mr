@@ -32,10 +32,7 @@ export default function Home() {
             <Heading as="h1" variant="hero">
               Immersive Reality for Real-World Impact
             </Heading>
-            <Lead>
-              OSIT VR Labs creates immersive experiences with a current focus on
-              VR Home for real-estate and residential visualization.
-            </Lead>
+            <Lead>Next-Generation VR Solutions for Business and Industry</Lead>
 
             <ActionRow>
               <a
@@ -91,7 +88,6 @@ export default function Home() {
           <Heading as="h2" variant="section">
             Use Cases
           </Heading>
-          <Lead>Current company focus: VR Home.</Lead>
 
           <Grid variant="three">
             {useCases.map((card) => (

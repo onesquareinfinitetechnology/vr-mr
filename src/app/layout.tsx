@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata = {
   title: "OSIT | VR Labs",
-  description: "OSIT VR Labs builds immersive reality experiences with a focus on VR Home.",
+  description: "Next-Generation VR Solutions for Business and Industry",
   icons: {
     icon: "/images/logoV2_vrlabs.png",
     shortcut: "/images/logoV2_vrlabs.png",
