@@ -243,6 +243,21 @@ Props: `React.HTMLAttributes<HTMLParagraphElement>`
 <Lead>Short supporting copy.</Lead>
 ```
 
+## Rating
+
+Reusable star rating display.
+
+Props:
+- `value: number`
+- `max?: number`
+- `label?: string`
+- plus standard `div` props
+
+```jsx
+<Rating value={5} />
+<Rating value={4} max={5} label="4 out of 5 stars" />
+```
+
 ## LogoCard
 
 Logo tile, optionally with an image.
@@ -253,6 +268,54 @@ Props:
 
 ```jsx
 <LogoCard imageSrc="/images/vr_logo_icon.png" />
+```
+
+## TestimonialCard
+
+Reusable testimonial card with optional rating.
+
+Props:
+- `quote: string`
+- `name: string`
+- `role?: string`
+- `company?: string`
+- `rating?: number`
+- plus standard `div` props
+
+```jsx
+<TestimonialCard
+  quote="The walkthrough made approvals much easier."
+  name="Aarav Mehta"
+  role="Sales Director"
+  company="Residential Development Partner"
+  rating={5}
+/>
+```
+
+## TestimonialCarousel
+
+Reusable testimonial carousel with horizontal scrolling and left/right controls. Use this when testimonial count may grow and a simple grid would become too tall.
+
+Props: `React.HTMLAttributes<HTMLDivElement>`
+
+```jsx
+<TestimonialCarousel>
+  <TestimonialCard quote="..." name="Aarav Mehta" rating={5} />
+  <TestimonialCard quote="..." name="Nisha Verma" rating={5} />
+</TestimonialCarousel>
+```
+
+## TestimonialRail
+
+Reusable horizontal rail for testimonial cards or similar content that may grow beyond a small grid.
+
+Props: `React.HTMLAttributes<HTMLDivElement>`
+
+```jsx
+<TestimonialRail>
+  <TestimonialCard quote="..." name="Aarav Mehta" rating={5} />
+  <TestimonialCard quote="..." name="Nisha Verma" rating={5} />
+</TestimonialRail>
 ```
 
 ## LogoGrid

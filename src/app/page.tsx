@@ -14,12 +14,66 @@ import {
   MediaCard,
   MutedLink,
   PolicyFooter,
+  Rating,
   Section,
   SiteHeader,
   TechPanel,
+  TestimonialCard,
+  TestimonialCarousel,
 } from "../components/ui";
 import { brandLogo, brandName, navItems } from "../data/site";
 import { useCases } from "../data/useCases";
+
+const testimonials = [
+  {
+    quote:
+      "Using the VR walkthrough for my own home while it was being built gave me a much clearer understanding of the space, proportions, and design decisions before execution. It made discussions and decisions far more confident.",
+    name: "Vidyanshu Jain",
+    role: "Structural Engineer, Master's in Tall Structures",
+    company: "Homeowner",
+    rating: 5,
+  },
+  {
+    quote:
+      "As an interior designer, I found the VR walkthrough extremely valuable for reviewing materials, layout flow, and the overall feel of the space. It is a very effective way to experience a design before it is built, and I liked the service very much.",
+    name: "Shubham Jain",
+    role: "Interior Designer",
+    company: "Design Consultant",
+    rating: 5,
+  },
+];
+
+const placeholderUseCases = [
+  {
+    slug: "vr-education-placeholder",
+    title: "VR Education",
+    summary:
+      "Placeholder use case for immersive learning and training experiences.",
+    image: "/images/vr_education.png",
+    placeholderLabel: "Placeholder",
+  },
+  {
+    slug: "vr-dating-placeholder",
+    title: "VR Dating",
+    summary:
+      "Placeholder use case for social and relationship-focused virtual experiences.",
+    image: "/images/vr_dating.png",
+    placeholderLabel: "Placeholder",
+  },
+];
+
+const showcasedUseCases = [
+  ...useCases.map((useCase) => ({
+    ...useCase,
+    href: `/use-cases/${useCase.slug}`,
+    footer: undefined,
+  })),
+  ...placeholderUseCases.map((useCase) => ({
+    ...useCase,
+    href: undefined,
+    footer: useCase.placeholderLabel,
+  })),
+];
 
 export default function Home() {
   return (
@@ -90,14 +144,15 @@ export default function Home() {
           </Heading>
 
           <Grid variant="three">
-            {useCases.map((card) => (
+            {showcasedUseCases.map((card) => (
               <FeatureCard
                 key={card.slug}
                 title={card.title}
                 description={card.summary}
                 imageSrc={card.image}
                 imageAlt={card.title}
-                href={`/use-cases/${card.slug}`}
+                href={card.href}
+                footer={card.footer}
               />
             ))}
           </Grid>
@@ -116,6 +171,34 @@ export default function Home() {
             imageSrc="/images/vr_tech_stack.png"
             imageAlt="VR technology stack"
           />
+        </Container>
+      </Section>
+
+      <Section id="testimonials" variant="surface-3">
+        <Container>
+          <Heading as="h2" variant="section">
+            Testimonials
+          </Heading>
+          <Lead>
+            Feedback from teams that have used our immersive visualization
+            services.
+          </Lead>
+          <TestimonialCarousel>
+            {testimonials.map((testimonial) => (
+              <TestimonialCard
+                key={testimonial.name}
+                quote={testimonial.quote}
+                name={testimonial.name}
+                role={testimonial.role}
+                company={testimonial.company}
+                rating={testimonial.rating}
+              />
+            ))}
+          </TestimonialCarousel>
+          <div className="testimonial-summary">
+            <Rating value={5} label="Overall client satisfaction: 5 out of 5 stars" />
+            <div className="testimonial-summary-copy">Trusted by teams building immersive buyer experiences.</div>
+          </div>
         </Container>
       </Section>
 
