@@ -1,7 +1,6 @@
 import type React from "react";
 
 import { CaseHero } from "./CaseHero";
-import { Button } from "./Button";
 import { CaseSection } from "./CaseSection";
 import { Container } from "./Container";
 import { Section } from "./Section";
@@ -21,7 +20,6 @@ type CaseStudyLayoutProps = {
   solution: string;
   impact: string[];
   deliverables: string[];
-  studylink: string;
   metrics?: CaseStudyMetrics[];
   timeline?: string[];
   techStack?: string[];
@@ -38,7 +36,6 @@ export function CaseStudyLayout({
   solution,
   impact,
   deliverables,
-  studylink,
   metrics = [],
   timeline = [],
   techStack = [],

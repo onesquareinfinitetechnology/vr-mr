@@ -34,13 +34,14 @@ export default async function UseCasePage({ params }: PageProps) {
         solution={useCase.solution}
         impact={useCase.impact}
         deliverables={useCase.deliverables}
-        studylink={useCase.studyLink}
         metrics={useCase.metrics}
         timeline={useCase.timeline}
         techStack={useCase.techStack}
       />
 
-      <PolicyFooter copyright={`© 2026 ${brandName}. All rights reserved.`} />
+      <PolicyFooter
+        copyright={`© 2026 ${brandName} (One Square Infinite Technologies). All rights reserved.`}
+      />
     </main>
   );
 }

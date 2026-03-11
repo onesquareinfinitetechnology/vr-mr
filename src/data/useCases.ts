@@ -15,7 +15,56 @@ export type UseCase = {
   studyLink?: string;
 };
 
-export const useCases: UseCase[] = [
+const vrHome: UseCase = {
+  slug: "vr-home",
+  title: "VR Home",
+  summary:
+    "Immersive real-estate walkthroughs and home visualization designed to help buyers explore spaces before they are built or visited.",
+  image: "/images/vr_home.png",
+  heroImage: "/images/vr_home.png",
+  overview:
+    "VR Home is OSIT VR Labs' current focus area for real-estate and home-experience visualization. It enables developers, architects, and buyers to step inside residential spaces virtually, evaluate layouts, materials, and room flow, and make decisions earlier in the sales and design cycle.",
+  challenges: [
+    "Traditional brochures, renders, and 2D floor plans make it hard for buyers to understand scale, flow, and the lived feel of a home.",
+    "Sales teams need a more persuasive way to present under-construction or customizable properties.",
+    "Design revisions are harder to validate when stakeholders cannot experience the space before build-out.",
+    "Remote buyers need a realistic exploration workflow without requiring an in-person site visit.",
+  ],
+  solution:
+    "VR Home delivers a guided immersive walkthrough where users can move through key rooms, inspect finishes, understand room proportions, and review design choices in a spatial environment. The experience supports property showcases, early buyer engagement, and design communication across teams.",
+  impact: [
+    "Improves buyer confidence by turning abstract plans into a spatial, explorable experience.",
+    "Helps sales and marketing teams present premium properties with stronger visual storytelling.",
+    "Reduces ambiguity during design review by giving stakeholders a shared immersive reference point.",
+    "Supports remote property discovery for clients who cannot visit the location physically.",
+  ],
+  deliverables: [
+    "Interactive VR home walkthrough experience.",
+    "High-fidelity interior and exterior environment modeling.",
+    "Room-by-room navigation and guided property presentation flow.",
+    "Visualization-ready asset pipeline for design and material updates.",
+    "Deployment package for sales demos, showcases, and client presentations.",
+  ],
+  metrics: [
+    { label: "Primary sector", value: "Real estate and residential visualization" },
+    { label: "Experience mode", value: "Immersive home walkthrough in VR" },
+    { label: "Use case focus", value: "Pre-sales, design review, and buyer engagement" },
+  ],
+  timeline: [
+    "Property discovery and architectural input collection",
+    "3D environment creation and layout validation",
+    "VR walkthrough assembly and interaction tuning",
+    "Client review, iteration, and showcase deployment",
+  ],
+  techStack: [
+    "Unreal Engine",
+    "VR headset deployment",
+    "3D environment and material visualization pipeline",
+    "Interactive navigation and presentation tooling",
+  ],
+};
+
+const legacyUseCases: UseCase[] = [
   {
     slug: "healthcare-vr",
     title: "Healthcare VR",
@@ -178,3 +227,5 @@ export const useCases: UseCase[] = [
     studyLink: "https://doi.org/10.3390/app15116293"
   },
 ];
+
+export const useCases: UseCase[] = [vrHome];

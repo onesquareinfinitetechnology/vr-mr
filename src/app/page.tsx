@@ -1,7 +1,6 @@
 import {
   AboutLayout,
   ActionRow,
-  Button,
   Container,
   CopyBlock,
   CtaInner,
@@ -12,8 +11,6 @@ import {
   HeroVisual,
   HeroVisualWrap,
   Lead,
-  LogoCard,
-  LogoGrid,
   MediaCard,
   MutedLink,
   PolicyFooter,
@@ -23,13 +20,6 @@ import {
 } from "../components/ui";
 import { brandLogo, brandName, navItems } from "../data/site";
 import { useCases } from "../data/useCases";
-
-const clientLogos = [
-  "/images/vr_logo_icon.png",
-  "/images/vr_logo_icon.png",
-  "/images/vr_logo_icon.png",
-  "/images/vr_logo_icon.png",
-];
 
 export default function Home() {
   return (
@@ -42,7 +32,10 @@ export default function Home() {
             <Heading as="h1" variant="hero">
               Immersive Reality for Real-World Impact
             </Heading>
-            <Lead>Next-gen VR + MR enterprise experiences</Lead>
+            <Lead>
+              OSIT VR Labs creates immersive experiences with a current focus on
+              VR Home for real-estate and residential visualization.
+            </Lead>
 
             <ActionRow>
               <a
@@ -73,13 +66,16 @@ export default function Home() {
               Who We Are
             </Heading>
             <Lead>
-              A pioneering team crafting high-fidelity VR and MR solutions that
-              integrate seamlessly with real-world workflows.
+              OSIT stands for One Square Infinite Technologies. VR Labs is a
+              focused unit within OSIT dedicated to crafting high-fidelity VR
+              and MR experiences that connect digital environments with
+              real-world decision making.
               <br />
-              We’re a VR-first team of seasoned creators and builders. Our 3D animators bring 15+ years of experience crafting high-fidelity visuals,
-              cinematic motion, and immersive environments. Alongside them, our software engineers have 10+ years of hands-on experience delivering robust,
-              scalable technology across real-world systems and the virtual world. Together, we blend artistry and engineering to create VR experiences that look incredible,
-              feel natural, and work reliably—whether it’s for products, training, simulation, or interactive storytelling.
+              We bring together experienced 3D artists, immersive designers,
+              and software engineers to build environments that look credible,
+              feel intuitive, and support practical business goals. Right now,
+              that effort is centered on VR Home as the company’s flagship
+              showcase.
             </Lead>
           </CopyBlock>
 
@@ -95,6 +91,7 @@ export default function Home() {
           <Heading as="h2" variant="section">
             Use Cases
           </Heading>
+          <Lead>Current company focus: VR Home.</Lead>
 
           <Grid variant="three">
             {useCases.map((card) => (
@@ -116,27 +113,15 @@ export default function Home() {
           <Heading as="h2" variant="section">
             Technology Stack
           </Heading>
-          <Lead>Powered by Unreal Engine and spatial computing APIs.</Lead>
+          <Lead>
+            Powered by Unreal Engine and immersive visualization workflows.
+          </Lead>
           <TechPanel
             imageSrc="/images/vr_tech_stack.png"
             imageAlt="VR technology stack"
           />
         </Container>
       </Section>
-
-      {/* <Section id="clients" variant="surface">
-        <Container>
-          <Heading as="h2" variant="section">
-            Our Clients
-          </Heading>
-
-          <LogoGrid>
-            {clientLogos.map((logo, index) => (
-              <LogoCard key={`${logo}-${index}`} imageSrc={logo} imageAlt="Client logo" />
-            ))}
-          </LogoGrid>
-        </Container>
-      </Section> */}
 
       <Section id="contact" variant="cta">
         <CtaInner>
@@ -157,7 +142,9 @@ export default function Home() {
         </CtaInner>
       </Section>
 
-      <PolicyFooter copyright={`© 2026 ${brandName}. All rights reserved.`} />
+      <PolicyFooter
+        copyright={`© 2026 ${brandName} (One Square Infinite Technologies). All rights reserved.`}
+      />
     </main>
   );
 }

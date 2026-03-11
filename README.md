@@ -1,6 +1,6 @@
-# VR-MR Landing
+# OSIT VR Labs Landing
 
-A Next.js + Tailwind landing site for OSIT VR-Labs with a reusable UI component system and data-driven case studies.
+A Next.js + Tailwind landing site for OSIT, with VR Labs presented as a focused unit of the company and a reusable, data-driven case study structure.
 
 ## Quick start
 
@@ -31,7 +31,7 @@ Open `http://localhost:3000`.
 
 ## Case studies
 
-Use-case cards are driven by `src/data/useCases.ts` and render at `/use-cases/[slug]`.
+Use-case cards are driven by `src/data/useCases.ts` and render at `/use-cases/[slug]`. The site is currently focused on a single featured use case: `VR Home`.
 
 ## GitHub Pages deployment
 

@@ -1,4 +1,4 @@
-export const brandName = "OSIT VR-Labs";
+export const brandName = "OSIT";
 export const brandLogo = "/images/logoV2_vrlabs.png";
 
 export const navItems = [
