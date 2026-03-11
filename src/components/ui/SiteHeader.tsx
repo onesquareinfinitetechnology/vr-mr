@@ -30,7 +30,16 @@ export function SiteHeader({
             <div className="brand">
               {logoSrc ? (
                 <>
-                  <img className="brand-logo" src={logoSrc} alt={logoAlt} />
+                  <img
+                    className="brand-logo"
+                    src={logoSrc}
+                    alt={logoAlt}
+                    width={256}
+                    height={256}
+                    loading="eager"
+                    fetchPriority="high"
+                    decoding="async"
+                  />
                 </>
               ) : (
                 brand

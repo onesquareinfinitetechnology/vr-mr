@@ -9,7 +9,15 @@ type MediaCardProps = {
 export function MediaCard({ imageSrc, imageAlt = "", children }: MediaCardProps) {
   return (
     <div className="media-card">
-      {imageSrc ? <img className="media-card-img" src={imageSrc} alt={imageAlt} /> : null}
+      {imageSrc ? (
+        <img
+          className="media-card-img"
+          src={imageSrc}
+          alt={imageAlt}
+          loading="lazy"
+          decoding="async"
+        />
+      ) : null}
       {children}
     </div>
   );

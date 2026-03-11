@@ -22,7 +22,7 @@ export function FeatureCard({
     <>
       {imageSrc ? (
         <div className="card-media">
-          <img src={imageSrc} alt={imageAlt} />
+          <img src={imageSrc} alt={imageAlt} loading="lazy" decoding="async" />
         </div>
       ) : null}
       <div className="card-title">{title}</div>

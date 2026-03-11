@@ -8,7 +8,15 @@ type LogoCardProps = {
 export function LogoCard({ imageSrc, imageAlt = "" }: LogoCardProps) {
   return (
     <div className="logo-card">
-      {imageSrc ? <img className="logo-card-img" src={imageSrc} alt={imageAlt} /> : null}
+      {imageSrc ? (
+        <img
+          className="logo-card-img"
+          src={imageSrc}
+          alt={imageAlt}
+          loading="lazy"
+          decoding="async"
+        />
+      ) : null}
     </div>
   );
 }

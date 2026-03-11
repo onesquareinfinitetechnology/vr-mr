@@ -24,7 +24,13 @@ export function CaseHero({
       </div>
       <div className="case-hero-media">
         <div className="case-hero-image">
-          <img src={imageSrc} alt={imageAlt} />
+          <img
+            src={imageSrc}
+            alt={imageAlt}
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+          />
         </div>
         {studyLink ? (
           <a className="link-muted case-hero-link" href={studyLink} target="_blank" rel="noreferrer">

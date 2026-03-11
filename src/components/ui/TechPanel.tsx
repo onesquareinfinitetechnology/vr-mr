@@ -9,7 +9,15 @@ type TechPanelProps = {
 export function TechPanel({ imageSrc, imageAlt = "", children }: TechPanelProps) {
   return (
     <div className="tech-panel">
-      {imageSrc ? <img className="tech-panel-img" src={imageSrc} alt={imageAlt} /> : null}
+      {imageSrc ? (
+        <img
+          className="tech-panel-img"
+          src={imageSrc}
+          alt={imageAlt}
+          loading="lazy"
+          decoding="async"
+        />
+      ) : null}
       {children}
     </div>
   );
