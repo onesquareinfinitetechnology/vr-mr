@@ -37,6 +37,7 @@ export default async function UseCasePage({ params }: PageProps) {
         metrics={useCase.metrics}
         timeline={useCase.timeline}
         techStack={useCase.techStack}
+        techStackNote={useCase.techStackNote}
       />
 
       <PolicyFooter

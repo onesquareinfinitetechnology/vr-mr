@@ -12,6 +12,7 @@ export type UseCase = {
   metrics: Array<{ label: string; value: string }>;
   timeline: string[];
   techStack: string[];
+  techStackNote?: string;
   studyLink?: string;
 };
 
@@ -140,7 +141,7 @@ const legacyUseCases: UseCase[] = [
   },
   {
     slug: "industrial-simulation",
-    title: "Industrial Simulation",
+    title: "VR Industrial",
     summary: "Construction safety / hazard recognition VR vs Flat-Screen Training Efficacy Study",
     image: "/images/vr_industrial.png",
     heroImage: "/images/vr_industrial.png",
@@ -184,6 +185,7 @@ const legacyUseCases: UseCase[] = [
       "Analytics: database logging of joystick event timestamps vs incident times",
       "Display comparison: semi-immersive flat-screen vs VR headset"
     ],
+    techStackNote: "This technology stack was used in the linked published case study. OSIT VR Labs uses Meta Quest headsets and Unreal Engine for its own simulations.",
     studyLink: "https://doi.org/10.3390/buildings12122084"
   },
   {
@@ -228,4 +230,7 @@ const legacyUseCases: UseCase[] = [
   },
 ];
 
-export const useCases: UseCase[] = [vrHome];
+export const useCases: UseCase[] = [
+  vrHome,
+  ...legacyUseCases.filter((useCase) => useCase.slug === "industrial-simulation"),
+];

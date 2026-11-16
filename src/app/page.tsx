@@ -43,22 +43,20 @@ const testimonials = [
   },
 ];
 
-const placeholderUseCases = [
+const additionalUseCases = [
   {
-    slug: "vr-education-placeholder",
+    slug: "vr-education",
     title: "VR Education",
     summary:
-      "Placeholder use case for immersive learning and training experiences.",
+      "Immersive learning and training experiences that bring lessons to life.",
     image: "/images/vr_education.png",
-    placeholderLabel: "Placeholder",
   },
   {
-    slug: "vr-dating-placeholder",
+    slug: "vr-dating",
     title: "VR Dating",
     summary:
-      "Placeholder use case for social and relationship-focused virtual experiences.",
+      "Shared virtual experiences for social connection and meaningful relationships.",
     image: "/images/vr_dating.png",
-    placeholderLabel: "Placeholder",
   },
 ];
 
@@ -66,12 +64,10 @@ const showcasedUseCases = [
   ...useCases.map((useCase) => ({
     ...useCase,
     href: `/use-cases/${useCase.slug}`,
-    footer: undefined,
   })),
-  ...placeholderUseCases.map((useCase) => ({
+  ...additionalUseCases.map((useCase) => ({
     ...useCase,
     href: undefined,
-    footer: useCase.placeholderLabel,
   })),
 ];
 
@@ -152,7 +148,6 @@ export default function Home() {
                 imageSrc={card.image}
                 imageAlt={card.title}
                 href={card.href}
-                footer={card.footer}
               />
             ))}
           </Grid>

@@ -23,6 +23,7 @@ type CaseStudyLayoutProps = {
   metrics?: CaseStudyMetrics[];
   timeline?: string[];
   techStack?: string[];
+  techStackNote?: string;
   cta?: React.ReactNode;
 };
 
@@ -39,6 +40,7 @@ export function CaseStudyLayout({
   metrics = [],
   timeline = [],
   techStack = [],
+  techStackNote,
   cta,
 }: CaseStudyLayoutProps) {
   const defaultCta = (
@@ -131,6 +133,7 @@ export function CaseStudyLayout({
 
           {techStack.length ? (
             <CaseSection title="Technology Stack">
+              {techStackNote ? <p>{techStackNote}</p> : null}
               <div className="case-tags">
                 {techStack.map((item) => (
                   <span key={item} className="case-tag">
